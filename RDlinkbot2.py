@@ -26,10 +26,10 @@ logging.basicConfig(filename='RDLinkBot.log', level=logging.DEBUG)
 updater = Updater(token=bottoken)
 dispatcher = updater.dispatcher
 
-headers = {'Authorization': f'Bearer {rdtoken}'}
-
 rdtoken = botdata['rdtoken']
 allowed_user_ids = botdata['allowed_user_ids']
+
+headers = {'Authorization': f'Bearer {rdtoken}'}
 
 def onText(bot, update):
 	msg = update.message
